@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import { Button } from "@blueprintjs/core";
+import Cosmos from "./components/Cosmos/Cosmos"
+import "./components/Cosmos/Cosmos.scss"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Cosmos className="Cosmos"></Cosmos>
+    // <div className="App">
+    //   <Button icon="refresh" text="This is the text modified"/>
+    //   <Button icon="refresh" text="This is the text modified"/>
+    //   <Button icon="refresh" text="This is the text modified"/>
+    // </div>
   );
 }
 

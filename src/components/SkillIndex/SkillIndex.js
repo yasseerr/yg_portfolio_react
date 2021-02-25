@@ -13,11 +13,15 @@ class SkillIndex extends React.Component{
        }
     }
     render(){
+      let level_array = []
+      for (let i = 0; i < 5; i++) {
+        if (i < this.state.level) level_array.push(<div className="indexBar indexBar_filled"></div>);
+        else level_array.push(<div className="indexBar indexBar_empty"></div>);
+      }
       return(
         <div className="SkillIndex">
           <div className="SkillIndexChild">{this.state.skillName}</div>
-          <div className="SkillIndexChild">{this.state.iconPath}</div>
-          <div className="SkillIndexChild">{this.state.level}</div>
+          {level_array}
         </div>
       );
     }

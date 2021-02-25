@@ -7,17 +7,22 @@
     left: 0;
     width: 100%;
     height: 5%;
+    min-height: 30px;
+    max-height: 90px;
     z-index: 1000;
-    background: $background2;
-    background: linear-gradient(0deg, $cosmos_background 0%, $background2 100%);
+    //background: $background2;
+    //background: linear-gradient(0deg, $cosmos_background 0%, $background2 100%);
+    background: #00000055;
     filter: drop-shadow(0px 1px 20px black);
     color: $textcolor;
 }
 
 .Title{
     @include flow-item;
+    position: relative;
+    //top: 10%;
     height: 100%;
-    font-size: 3vh;
+    font-size: 25px;
     float: left;
 }
 
@@ -28,12 +33,11 @@
     width: 60%;
     height: 100%;
     float: left;
-    background-color: red;
     box-sizing: content-box;
     overflow: hidden;
 }
 
-$duration: 10s;
+$duration: 30s;
 @-webkit-keyframes ticker {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -64,6 +68,7 @@ $duration: 10s;
     display: inline-block;
     white-space: nowrap;
     height: 100%;
+    width: auto;
     box-sizing: content-box;
     -webkit-animation-iteration-count: infinite; 
             animation-iteration-count: infinite;
@@ -73,4 +78,19 @@ $duration: 10s;
            animation-name: ticker;
     -webkit-animation-duration: $duration;
             animation-duration: $duration;
+}
+
+.Separator{
+    position: relative;
+    float: left;
+    top: 10%;
+    height: 80%;
+    width: 2pt;
+    background-color: #ffffff55;
+    // &_left{
+    //     background: linear-gradient(90deg,#ffffffaa 0%,#ffffffaa 20%,#ffffff00 100%);
+    // }
+    // &_right{
+    //     background: linear-gradient(-90deg,#ffffffaa 0%,#ffffffaa 20%,#ffffff00 100%);
+    // }
 }

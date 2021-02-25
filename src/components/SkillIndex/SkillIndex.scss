@@ -1,0 +1,15 @@
+@import '../../Styles/general.scss';
+
+.SkillIndexChild{
+    display: inline-block;
+}
+
+.SkillIndex {
+    @include flow-item(5px,5px);
+    position: relative;
+    background-color: green;
+    color: white;   
+    display: inline-block;
+    height: 80%;
+    top: 10%;
+}

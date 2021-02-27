@@ -3,6 +3,8 @@ $cosmos_background: #1d3557;
 $background2: #457b9d;
 $textcolor: #F1FAEE;
 $shadowcolor: #a8dadc;
+$layer2-background: #00000066;
+$layer3-background: #00000044;
 
 @mixin flow-item($r:10px,$l:10px){
     margin: {

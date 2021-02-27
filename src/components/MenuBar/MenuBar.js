@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './MenuBar.scss';
 import SkillIndex from '../SkillIndex/SkillIndex';
 import MenuButton from "../MenuButton/MenuButton";
+import { IconNames } from "@blueprintjs/icons";
 
 const MenuBar = () => {
   const currentSkills = [{skillName: "Qt",level: 5,iconPath:"path"},
@@ -19,7 +20,8 @@ const MenuBar = () => {
         </div>
     </div>
     <div className="Separator Separator_right"></div>
-    <MenuButton></MenuButton>
+    <MenuButton path="/aboutme" icon="info-sign">About me</MenuButton>
+    <MenuButton path="/skills" icon="list-detail-view">Skills</MenuButton>
   </div>
   )
 };

@@ -1,0 +1,59 @@
+@import "../../Styles/general.scss";
+.SkillsListing {
+    padding: {
+        right: 1%;
+        left: 1%;
+    }
+    height: 90%;
+    width: 100;
+}
+
+.SkillDelegate{
+    float: left;
+    padding: 10px;
+    width: 100%;
+    //height: 50px;
+    //background: rgba($cosmos-color-3,.5);
+    background: #ffffff11;
+    //overflow: auto;
+    //filter: drop-shadow(1px 5px 6px #00000055);
+    margin: {
+        top: 2px;
+    }
+    border: {
+        radius: 4px;
+        bottom: {
+            color: $textcolor;
+            width: 0px;
+            style: solid;
+        }
+    };
+}
+.delegate-index{
+    // float: right;
+    background-color: green;
+}
+
+.delegate-title{
+    float: left;
+    font-size: 20px;
+    width: 20%;
+}
+.delegate-projects{
+    width: 50%;
+    float: left;
+    //overflow: auto;
+    &-item{
+        cursor: pointer;
+        &:hover{
+            background-color: #ffffff33;
+        }
+    }
+    &-icon{
+        // height: 80%;
+        // top: 10%;
+        // position: relative;
+        vertical-align: middle;
+    }
+}
+

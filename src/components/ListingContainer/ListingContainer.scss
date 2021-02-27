@@ -1,0 +1,11 @@
+@import "../../Styles/general.scss";
+
+.ListingContainer {
+    background-color: $layer3-background;
+    color: $textcolor;
+    position: absolute;
+    top: 40px;
+    right: 0%;
+    height: 100%;
+    width: 50%;
+}

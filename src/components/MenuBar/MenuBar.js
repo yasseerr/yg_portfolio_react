@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MenuBar.scss';
 import SkillIndex from '../SkillIndex/SkillIndex';
+import MenuButton from "../MenuButton/MenuButton";
 
 const MenuBar = () => {
   const currentSkills = [{skillName: "Qt",level: 5,iconPath:"path"},
@@ -18,7 +19,7 @@ const MenuBar = () => {
         </div>
     </div>
     <div className="Separator Separator_right"></div>
-    <div style={{display: "inline-block", textAlign: "right",backgroundColor: "blue",height: "100%",float: "right"}}> This will hold the sliding items</div>
+    <MenuButton></MenuButton>
   </div>
   )
 };

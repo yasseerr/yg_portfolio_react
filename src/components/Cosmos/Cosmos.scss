@@ -1,8 +1,18 @@
 // using this pallete https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557
+
+// using the cosmos colors from https://www.color-hex.com/color-palette/42627
+
 $background0: #1d3557;
 
+$cosmos-color-1: #101747;
+$cosmos-color-2: #030035;
+$cosmos-color-3: #321051;
 .Cosmos {
     background-color: $background0;
     height: 100%;
     width: 100%;
+
+    &_radial{
+        background: radial-gradient(circle at 10% 10%,$cosmos-color-1 0%, $cosmos-color-2 40%,$cosmos-color-3 100%); 
+    }
 }

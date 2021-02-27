@@ -1,0 +1,31 @@
+@import '../../Styles/general.scss';
+
+.MenuButton {
+    background-color: transparent;
+    color: $textcolor;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    height: 80%;
+    float: right;
+    border: none;
+    margin: {
+        right: 3px;
+    }
+    
+    &:hover{
+        background-color: $background2;
+        border-radius: 3px;
+    }
+    &:focus{
+        outline: none;
+    }
+    
+}
+
+.button-icon{
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 3px;
+}

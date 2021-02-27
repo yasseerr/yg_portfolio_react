@@ -7,11 +7,6 @@ import "./components/Cosmos/Cosmos.scss"
 function App() {
   return (
     <Cosmos className="Cosmos"></Cosmos>
-    // <div className="App">
-    //   <Button icon="refresh" text="This is the text modified"/>
-    //   <Button icon="refresh" text="This is the text modified"/>
-    //   <Button icon="refresh" text="This is the text modified"/>
-    // </div>
   );
 }
 

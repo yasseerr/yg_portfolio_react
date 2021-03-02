@@ -4,8 +4,8 @@
         right: 1%;
         left: 1%;
     }
-    height: 90%;
-    width: 100;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .SkillDelegate{
@@ -17,6 +17,7 @@
     background: #ffffff11;
     //overflow: auto;
     //filter: drop-shadow(1px 5px 6px #00000055);
+    box-sizing: border-box;
     margin: {
         top: 2px;
     }

@@ -7,10 +7,6 @@
     height: 50%;
     bottom: 0%;
     width: 100%;
-    padding: {
-        right: 1%;
-        left: 1%;
-    }
     background-color: #00000055;
     border-top: {
         color: #ffffff22;
@@ -18,3 +14,72 @@
         width: 1px;
     }
 }
+h3{
+    width: 45%;
+    float: left;
+    overflow: auto;
+    height: 10%;
+    font-size: 2.5vh;
+    vertical-align: middle;
+    padding-left: 1%;
+    box-sizing: border-box;
+}
+.gallery{
+    position: absolute;
+    top: 2%;
+    bottom: 1%;
+    right: 1%;
+    width: 60%;
+    padding: 1px;
+    box-sizing: border-box;
+    border: {
+        color: white;
+        width: 1px;
+        style: solid;
+    }
+}
+.description{
+    position: absolute;
+    top: 13%;
+    left: 1%;
+    bottom: 1%;
+    width: 36%;
+    box-sizing: border-box;
+    padding: 1%;
+    background-color: #ffffff11;
+}
+
+.project-image{
+    width: auto;
+    padding: auto;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+.bottom{
+    &-menu{
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 40px;
+        background-color: #00000055;
+    }
+    &-button{
+        position: relative;
+        top: 10%;
+        vertical-align: middle;
+        height: 80%;
+        width: 40px;
+        float: left;
+        background-color: #00000022;
+        margin-left: 5px;
+        &:hover{
+            background-color: $cosmos-color-1;
+        }
+    }
+    &-icon{
+        vertical-align: middle;
+    }
+
+}
+

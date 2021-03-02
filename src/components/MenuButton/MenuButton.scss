@@ -1,4 +1,5 @@
 @import '../../Styles/general.scss';
+@import "../Cosmos/Cosmos.scss";
 
 .MenuButton {
     background-color: transparent;
@@ -15,7 +16,7 @@
     }
     
     &:hover{
-        background-color: #101747;
+        background-color: $cosmos-color-1;
         border-radius: 3px;
     }
     &:focus{

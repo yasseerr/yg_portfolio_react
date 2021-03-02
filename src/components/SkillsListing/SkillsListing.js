@@ -4,6 +4,10 @@ import './SkillsListing.scss';
 import SkillIndex from "../SkillIndex/SkillIndex";
 import { Icon,Button } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+import { displayProject } from "../../actions";
+
+import { connect } from 'react-redux'
+
 
 const SkillListingDelegate = (props) => {
 
@@ -13,7 +17,7 @@ const SkillListingDelegate = (props) => {
   }
   let projects = props.skill.projects.map((p,i)=>{
     return(
-      <div className="delegate-projects-item">
+      <div onClick={()=>props.onClicked(p.name)} className="delegate-projects-item">
         <Icon icon="chevron-right" color="white" className="delegate-projects-icon"/> {p.name}
       </div>
     );
@@ -29,7 +33,7 @@ const SkillListingDelegate = (props) => {
   );
 }
 
-const SkillsListing = () => {
+const SkillsListing = (props) => {
   const skills = [
     {
       name: "Qt",
@@ -58,12 +62,20 @@ const SkillsListing = () => {
       ]
     }];
   return (
-    <div className="SkillsListing">
+    <div className="SkillsListing" >
       SkillsListing Component
-      {skills.map((skillObj,index)=><SkillListingDelegate skill={skillObj}/>)}
+      {skills.map((skillObj,index)=><SkillListingDelegate onClicked={props.displayProject} skill={skillObj}/>)}
     </div>
   )
 };
 
+const mapDispatchToProps = {
+    displayProject
+}
+const mapStateToProps = (state) => ({
+  project_open: state.ui.project_open
+})
 
-export default SkillsListing;
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(SkillsListing);

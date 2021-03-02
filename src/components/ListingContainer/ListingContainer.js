@@ -6,11 +6,15 @@ import {Link,Switch,Route,BrowserRouter as Router } from "react-router-dom";
 import { Button,Card } from "@blueprintjs/core";
 import SkillsListing from "../SkillsListing/SkillsListing";
 
+import { connect } from 'react-redux'
+
+
 class ListingContainer extends React.Component{
   
   render(){
+    let adjastued_class = "ListingContainer" + (this.props.project_open ? " minimized":"");
    return(
-    <div className="ListingContainer">
+    <div className={adjastued_class} >
           <Switch>
             <Route exact path="/"  component={AboutMe} />
             <Route exact path="/aboutme" component={AboutMe}/>
@@ -28,4 +32,13 @@ function AboutMe(){
   );
 }
 
-export default ListingContainer;
+const mapStateToProps = (state) => ({
+  project_open: state.ui.project_open
+})
+
+const mapDispatchToProps = {
+  
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(ListingContainer);

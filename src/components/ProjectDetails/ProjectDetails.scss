@@ -1,0 +1,20 @@
+@import "../../Styles/general.scss";
+@import "../Cosmos/Cosmos.scss";
+
+.ProjectDetails {
+    position: absolute;
+    color: $textcolor;
+    height: 50%;
+    bottom: 0%;
+    width: 100%;
+    padding: {
+        right: 1%;
+        left: 1%;
+    }
+    background-color: #00000055;
+    border-top: {
+        color: #ffffff22;
+        style: solid;
+        width: 1px;
+    }
+}

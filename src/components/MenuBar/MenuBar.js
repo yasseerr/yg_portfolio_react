@@ -11,7 +11,7 @@ const MenuBar = () => {
     { skillName: "JAVA", level: 4, iconPath: "path" },
     { skillName: "Matlab", level: 3, iconPath: "path" }];
   return (
-  <div className="MenuBar">
+  <div className="MenuBar" onClick={()=>console.log("menu bar clicked")}>
     <div className="Title">Yasser Grimes </div>
     <div className="Separator Separator_left"></div>
     <div className="ticker-wrap">

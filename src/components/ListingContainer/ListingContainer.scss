@@ -8,4 +8,13 @@
     right: 0%;
     height: 100%;
     width: 50%;
+    border-left: {
+        color: #ffffff22;
+        width: 1px;
+        style: solid;
+    }
+}
+
+.minimized{
+    height: calc(50% - 40px)
 }

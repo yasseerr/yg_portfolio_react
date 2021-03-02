@@ -4,6 +4,7 @@ import './Cosmos.scss';
 import { FIXED } from '@blueprintjs/core/lib/esm/common/classes';
 import MenuBar from '../MenuBar/MenuBar';
 import ListingContainer from '../ListingContainer/ListingContainer';
+import ProjectDetails from "../ProjectDetails/ProjectDetails";
 
 const Cosmos = () => {
   const centerRectStyle = {
@@ -22,6 +23,7 @@ const Cosmos = () => {
       It should have some kind of text at least
     </div>
     <ListingContainer></ListingContainer>
+    <ProjectDetails></ProjectDetails>
   </div>
   );
 };

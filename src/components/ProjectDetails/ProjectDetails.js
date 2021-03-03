@@ -1,7 +1,7 @@
 import React,{useState}from 'react';
 import PropTypes from 'prop-types';
 import './ProjectDetails.scss';
-import { displayProject } from "../../actions";
+import { displayProject,hideProject } from "../../actions";
 
 import { connect } from "react-redux";
 import { Icon } from "@blueprintjs/core";
@@ -14,8 +14,10 @@ const ProjectDetails = (props) => {
   const [imageIndex,setImageIndex] = useState(0);
   const tick = ()=> setImageIndex(imageIndex+1);
   const tock = ()=> setImageIndex(imageIndex-1);
+  const project_style =(!props.project_open?{display: "None"}:{});
   return(
-    <div className="ProjectDetails">
+    <div className="ProjectDetails" style={project_style}>
+      <Icon onClick={props.hideProject} className="hide-icon" icon="cross" color="white" iconSize="20"></Icon>
       <h3>Project: {props.current_project}</h3>
       <div className="description">Description:
       <p>the project was developed when you know something was missing and needed to be developed</p>
@@ -37,11 +39,13 @@ ProjectDetails.propTypes = {};
 ProjectDetails.defaultProps = {};
 
 const mapStateToProps = (state) => ({
-  current_project: state.current_project
+  current_project: state.current_project,
+  project_open: state.ui.project_open
 })
 
 const mapDispatchToProps = {
-  displayProject  
+  displayProject,
+  hideProject
 }
 
 

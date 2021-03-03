@@ -26,13 +26,18 @@ h3{
 }
 .gallery{
     position: absolute;
-    top: 2%;
+    top: 30px;
     bottom: 1%;
     right: 1%;
     width: 60%;
     padding: 1px;
     box-sizing: border-box;
-    border: {
+    border-left: {
+        color: white;
+        width: 1px;
+        style: solid;
+    }
+    border-right:{
         color: white;
         width: 1px;
         style: solid;

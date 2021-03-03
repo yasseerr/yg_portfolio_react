@@ -63,7 +63,7 @@ const SkillsListing = (props) => {
     }];
   return (
     <div className="SkillsListing" >
-      SkillsListing Component
+      <h3>Skills</h3>
       {skills.map((skillObj,index)=><SkillListingDelegate onClicked={props.displayProject} skill={skillObj}/>)}
     </div>
   )

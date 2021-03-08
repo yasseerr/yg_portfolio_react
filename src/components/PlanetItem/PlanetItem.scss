@@ -1,0 +1,121 @@
+@import "../Cosmos/Cosmos.scss";
+.PlanetItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #00ff0000;
+    // border: {
+    //     radius: 50%;
+    //     width: 4px;
+    //     color: white;
+    // }
+    //border-image-source: url("../../data/images/border-image1.svg");
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: orbit;
+           animation-name: orbit;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    transform: translate(-50%,-50%) rotate(30deg);
+
+}
+.PlanetDiv{
+    background-color: #FBB04088;
+    border-radius: 50%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(0 50%);
+    border: {
+      color: #FBB040;
+      style: solid;
+      width: 10%;
+    }
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: orbit-planet;
+           animation-name: orbit-planet;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.planet-desc{
+  color: white;
+  border-radius: 3px;
+  top: 0%;
+  right: 0%;
+  position: absolute;
+  background-color: #00000099;
+  transform: translate(105%,-20%);
+  font-size: 12px;
+  padding: 20%;
+}
+
+
+@-webkit-keyframes orbit {
+  0% {
+    -webkit-transform: rotate(0deg) ;
+    transform:translate(-50%,-50%) rotate(0deg);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:translate(-50%,-50%) rotate(360deg);
+  }
+}
+@keyframes orbit {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform:translate(-50%,-50%) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:translate(-50%,-50%) rotate(360deg);
+  }
+}
+
+//planet
+@-webkit-keyframes orbit-planet {
+  0% {
+    -webkit-transform: rotate(0deg) ;
+    transform:  rotate(0deg);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform:  rotate(-360deg);
+  }
+}
+@keyframes orbit-planet {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform:  rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform:  rotate(-360deg);
+  }
+}
+
+.border-svg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    height: 0%;
+}

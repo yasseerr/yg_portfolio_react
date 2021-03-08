@@ -11,7 +11,6 @@ $cosmos-color-3: #321051;
     background-color: $background0;
     height: 100%;
     width: 100%;
-
     &_radial{
         background: radial-gradient(circle at 10% 10%,$cosmos-color-1 0%, $cosmos-color-2 40%,$cosmos-color-3 100%); 
     }

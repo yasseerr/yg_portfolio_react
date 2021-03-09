@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { hideProject } from "../../actions";
 
 import { useLocation } from "react-router-dom";
+import portfolio from "../../portfolio_config";
 
 
 const MenuBar = () => {
@@ -19,7 +20,7 @@ const MenuBar = () => {
   const pathName = useLocation().pathname
   return (
     <div className="MenuBar" onClick={() => console.log("menu bar clicked")}>
-      <div className="Title">Yasser Grimes </div>
+      <div className="Title">{portfolio.name + " " +portfolio.last_name}</div>
       <div className="Separator Separator_left"></div>
       <div className="ticker-wrap">
         <div className="ticker">

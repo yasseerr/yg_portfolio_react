@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import PropTypes from 'prop-types';
 import './ListingContainer.scss';
 import { realpathSync } from 'fs';
@@ -10,6 +10,9 @@ import SkillsListing from "../SkillsListing/SkillsListing";
 import { connect } from 'react-redux'
 
 import { hideList } from "../../actions";
+
+import portfolio from "../../portfolio_config"
+import im from "../../data/Endorsements/01.png";
 
 
 class ListingContainer extends React.Component{
@@ -39,10 +42,31 @@ class ListingContainer extends React.Component{
   }
 };
 
+
+function Endorsement(props) {
+  let im2 = require("../../data/Endorsements/"+props.endorsement.image);
+  const s = {
+    height: "200px",
+    width: "auto"
+  }
+  return (
+    <div className="endorsement">
+      <div className="endorsement-title">{props.endorsement.name}</div>
+      <center><img style={s} src={im2.default}></img></center>
+      <a className="endorsement-link" href={props.endorsement.link}>Link</a>
+    </div>
+  )
+}
+
+
 function AboutMe(){
-  return(
-    <div>this is the about me section</div>
-  );
+  let endorsements
+  return <div style={{padding: "20px"}}> 
+  {portfolio.about_me}
+  <br/>
+  <h2>Endorsements</h2>
+  {portfolio.endorsement.map((e)=><Endorsement endorsement={e}/>)} 
+  </div>;
 }
 
 const mapStateToProps = (state) => ({

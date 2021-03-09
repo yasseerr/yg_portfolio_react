@@ -39,7 +39,7 @@ const SkillsListing = (props) => {
       name: "Qt",
       level: 5,
       projects: [
-        { name: "Visual Bluepting" },
+        { name: "VisualBlueprint" },
         { name: "OpenSimQt" }
       ]
     },
@@ -47,7 +47,7 @@ const SkillsListing = (props) => {
       name: "C++",
       level: 5,
       projects: [
-        { name: "Visual Bluepting" },
+        { name: "VisualBlueprint" },
         { name: "OpenSimQt" },
         { name: "Arduino"}
       ]
@@ -56,7 +56,7 @@ const SkillsListing = (props) => {
       name: "Java",
       level: 4,
       projects: [
-        { name: "Visual Bluepting" },
+        { name: "VisualBlueprint" },
         { name: "OpenSimQt" },
         { name: "Arduino" }
       ]

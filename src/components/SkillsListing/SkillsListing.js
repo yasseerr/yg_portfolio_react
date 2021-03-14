@@ -40,7 +40,11 @@ const SkillsListing = (props) => {
       level: 5,
       projects: [
         { name: "VisualBlueprint" },
-        { name: "OpenSimQt" }
+        { name: "OpensimQt" },
+        { name: "QoSOverSDN"},
+        { name: "AlteredDomination"},
+        { name: "BybTelemetry"},
+        { name: "RoboComposer"}
       ]
     },
     {
@@ -48,8 +52,19 @@ const SkillsListing = (props) => {
       level: 5,
       projects: [
         { name: "VisualBlueprint" },
-        { name: "OpenSimQt" },
-        { name: "Arduino"}
+        { name: "OpensimQt" },
+        { name: "Arduino"},
+        { name: "AlteredDomination"},
+        { name: "BybTelemetry"},
+        { name: "RoboComposer"}
+      ]
+    },
+    {
+      name: "Python",
+      level: 5,
+      projects: [
+        {name: "QoSOverSDN"},
+        {name: "IotSecurityCamMotion"}
       ]
     },
     {
@@ -57,10 +72,26 @@ const SkillsListing = (props) => {
       level: 4,
       projects: [
         { name: "VisualBlueprint" },
-        { name: "OpenSimQt" },
+        { name: "OpensimQt" },
         { name: "Arduino" }
       ]
-    }];
+    },
+    {
+      name: "React",
+      level: 4,
+      projects: [
+        { name: "RoboComposer" },
+        { name: "ygPortfolioReact"}
+      ]
+    },
+    {
+      name: "Django",
+      level: 3,
+      projects: [
+        { name: "IotSecurityCamMotion"}
+      ]
+    }
+  ];
   return (
     <div className="SkillsListing" >
       <h3>Skills</h3>

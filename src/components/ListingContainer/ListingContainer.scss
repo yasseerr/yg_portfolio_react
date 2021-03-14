@@ -53,4 +53,14 @@
         left: 2%;
         color: white;
     }
+    &-button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+        &:hover{
+            background-color: orange;
+        }
+    }
 }

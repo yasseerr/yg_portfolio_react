@@ -6,6 +6,11 @@ $shadowcolor: #a8dadc;
 $layer2-background: #00000066;
 $layer3-background: #00000044;
 
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  //font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 @mixin flow-item($r:10px,$l:10px){
     margin: {
         left: $l;

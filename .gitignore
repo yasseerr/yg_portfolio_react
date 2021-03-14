@@ -24,3 +24,6 @@ yarn-error.log*
 
 generate-react-cli.json
 .vscode/
+
+*.swo
+*.swp

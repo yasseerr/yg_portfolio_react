@@ -5,7 +5,7 @@
 - [X] create the svg arc
 - [X] create the contact buttons
 - [X] create the image holder
-- [ ] create the planets items
-        - [ ] create the item
-        - [ ] add the animation
+- [X] create the planets items
+        - [X] create the item
+        - [X] add the animation
 - [ ] load fonts

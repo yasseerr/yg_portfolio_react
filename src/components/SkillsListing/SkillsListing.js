@@ -8,6 +8,8 @@ import { displayProject } from "../../actions";
 
 import { connect } from 'react-redux'
 
+import Portfolio from "../../portfolio_config";
+
 
 const SkillListingDelegate = (props) => {
 
@@ -26,6 +28,9 @@ const SkillListingDelegate = (props) => {
     <div className="SkillDelegate">
       <div className="delegate-title">{props.skill.name}</div>
       <div className="delegate-projects">
+        {props.skill.description}
+        <p></p>
+        <h4>Projects  </h4>
          {projects}
       </div>
       <SkillIndex showName={false} skillName={props.skill.name} level={props.skill.level} style={indexStyle}></SkillIndex>
@@ -34,68 +39,11 @@ const SkillListingDelegate = (props) => {
 }
 
 const SkillsListing = (props) => {
-  const skills = [
-    {
-      name: "Qt",
-      level: 5,
-      projects: [
-        { name: "VisualBlueprint" },
-        { name: "OpensimQt" },
-        { name: "QoSOverSDN"},
-        { name: "AlteredDomination"},
-        { name: "BybTelemetry"},
-        { name: "RoboComposer"}
-      ]
-    },
-    {
-      name: "C++",
-      level: 5,
-      projects: [
-        { name: "VisualBlueprint" },
-        { name: "OpensimQt" },
-        { name: "Arduino"},
-        { name: "AlteredDomination"},
-        { name: "BybTelemetry"},
-        { name: "RoboComposer"}
-      ]
-    },
-    {
-      name: "Python",
-      level: 5,
-      projects: [
-        {name: "QoSOverSDN"},
-        {name: "IotSecurityCamMotion"}
-      ]
-    },
-    {
-      name: "Java",
-      level: 4,
-      projects: [
-        { name: "VisualBlueprint" },
-        { name: "OpensimQt" },
-        { name: "Arduino" }
-      ]
-    },
-    {
-      name: "React",
-      level: 4,
-      projects: [
-        { name: "RoboComposer" },
-        { name: "ygPortfolioReact"}
-      ]
-    },
-    {
-      name: "Django",
-      level: 3,
-      projects: [
-        { name: "IotSecurityCamMotion"}
-      ]
-    }
-  ];
+  
   return (
     <div className="SkillsListing" >
       <h3>Skills</h3>
-      {skills.map((skillObj,index)=><SkillListingDelegate onClicked={props.displayProject} skill={skillObj}/>)}
+      {Portfolio.skills.map((skillObj,index)=><SkillListingDelegate onClicked={props.displayProject} skill={skillObj}/>)}
     </div>
   )
 };

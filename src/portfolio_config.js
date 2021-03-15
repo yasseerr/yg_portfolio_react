@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 let aboutme = () => { return(
     <div>
     <p> Hello there ! </p> <p>Thanks for visiting</p>
@@ -210,13 +212,149 @@ const projects = {
     } 
 }
 
+const skills = [
+    {
+        name: "Qt",
+        level: 5,
+        projects: [
+            { name: "VisualBlueprint" },
+            { name: "OpensimQt" },
+            { name: "QoSOverSDN" },
+            { name: "AlteredDomination" },
+            { name: "BybTelemetry" },
+            { name: "RoboComposer" }
+        ]
+    },
+    {
+        name: "C++",
+        level: 5,
+        projects: [
+            { name: "VisualBlueprint" },
+            { name: "OpensimQt" },
+            { name: "Arduino" },
+            { name: "AlteredDomination" },
+            { name: "BybTelemetry" },
+            { name: "RoboComposer" }
+        ]
+    },
+    {
+        name: "Python",
+        level: 5,
+        decription: "Use it for building ML models and backend services with knowledge of the asyncio,multithreading corotines...",
+        projects: [
+            { name: "QoSOverSDN" },
+            { name: "VisualBlueprint"},
+            { name: "IotSecurityCamMotion" }
+        ]
+    },
+    {
+        name: "Java",
+        level: 4,
+        description: "Developed small android apps in Android studio and linked databases to services using the springboot framework.",
+        projects: [
+            { name: "OpensimQt" },
+        ]
+    },
+    {
+        name: "Unity C#",
+        description: "Developed games and assests for the unity store for both mobile(gesture based) and PC + Understanding of the DOTS approach",
+        level: 4,
+        projects: []
+    },
+    {
+        name: "React",
+        level: 4,
+        description: "Knowledge of the state management using Redux and Providers and developed functions for fetching data from services asynchronously",
+        projects: [
+            { name: "RoboComposer" },
+            { name: "ygPortfolioReact" }
+        ]
+    },
+    {
+        name: "UML",
+        level: 4,
+        description: "Designed projects from specification document to deployment using the UML diagrams and tools(Entreprize Architect-Visual Paradigm)",
+        projects: [
+            {name: "VisualBlueprint"},
+            {name: "AlteredDomination"}
+        ]
+    },
+    {
+        name: "Docker-Kubernetes",
+        description: "Shiped services to the cloud in docker containers configured using docker-compose or in a Kubernetes cluster",
+        level: 4,
+        projects: []
+    },
+    {
+        name: "GCP",
+        description: "Aquired a professional certificate for working with GCP services and GKE offered by Google throught Coursera",
+        level: 4,
+        projects: []
+    },
+    {
+        name: "Django-Flask",
+        description: "Built backend services using flask and django-rest along with templating and database connections",
+        level: 3,
+        projects: [
+            { name: "IotSecurityCamMotion" }
+        ]
+    },
+    {
+        name: "TensorFlow",
+        description: "Developed DCNN 1D-2D networks and a DCNN for protein secondery state predictions from amino-asid sequence + Knowledge of optimization algorithms and investgating graphs using the dashboard",
+        level: 3,
+        projects: []
+    },
+    {
+        name: "Scrum-Jira",
+        description: "Created stories and organized work from backlog into sprints and epics + task estimation",
+        level: 3,
+        projects: []
+    },
+    {
+        name: "Flutter",
+        level: 3,
+        description: "Developed custumized widgets (with material design) + state management using providers-redux and updated about the new dart packages and widgets",
+        projects: []
+    },
+    {
+        name: "Vtk",
+        level: 3,
+        projects: [
+            { name: "OpensimQt"}
+        ]
+    },
+    {
+        name: "Ilustrature-Photoshop",
+        level: 3,
+        description: "Designed Logos and Game material using vector operations in Illustrator and raster in Photoshop",
+        projects: [
+            { name: "AlteredDomination"},
+            { name: "ygPortfolioReact"},
+        ]
+    },
+    {
+        name: "Blender",
+        description: "Designeed ,textured and animated 3D models for personal games",
+        level: 3,
+        projects: []
+    },
+    {
+        name: "QGis",
+        description: "Performed operation on geographic data on the maps both raster-vector",
+        level: 2,
+        projects: []
+    }
+];
+
 const Portfolio = {
     name: "Yasser",
     last_name: "Grimes",
     about_me: aboutme(),
     endorsement: endorssment,
     projects,
-    education
+    education,
+    skills
 }
 
 export default Portfolio;

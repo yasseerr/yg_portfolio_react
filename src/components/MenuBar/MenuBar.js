@@ -13,10 +13,6 @@ import portfolio from "../../portfolio_config";
 
 const MenuBar = () => {
   // console.log(useLocation());
-  const currentSkills = [{skillName: "Qt",level: 5,iconPath:"path"},
-    { skillName: "C++", level: 5, iconPath: "path" },
-    { skillName: "JAVA", level: 4, iconPath: "path" },
-    { skillName: "Matlab", level: 3, iconPath: "path" }];
   const pathName = useLocation().pathname
   return (
     <div className="MenuBar" onClick={() => console.log("menu bar clicked")}>
@@ -24,7 +20,7 @@ const MenuBar = () => {
       <div className="Separator Separator_left"></div>
       <div className="ticker-wrap">
         <div className="ticker">
-          {currentSkills.map((value, index) => { return <SkillIndex skillName={value.skillName} level={value.level} iconPath={value.iconPath} /> })}
+          {portfolio.skills.map((value, index) => { return <SkillIndex skillName={value.name} level={value.level} iconPath={""} /> })}
         </div>
       </div>
       <div className="Separator Separator_right"></div>

@@ -40,6 +40,19 @@ let endorssment = [
     }
 ]
 
+let certification = [
+    {
+        name: "Cloud Architecture with Google Cloud",
+        image: "gcp.png",
+        link: "oursera.org/account/accomplishments/professional-cert/EUYHVXQRUU5Q"
+    },
+    {
+        name: "Architecting with Google Kubernetes Engine",
+        image: "gke.png",
+        link: "https://www.coursera.org/account/accomplishments/specialization/6UGXZFWU8V99"
+    }
+]
+
 const education = [
     {
         name: "CS Degree (Master) in Computer Systems Engineering",
@@ -347,14 +360,31 @@ const skills = [
     }
 ];
 
+const planets = [
+    {
+        abriviation: "DP",
+        description: "Understanding of the  22 design patterns"
+    },
+    {
+        abriviation: "AG",
+        description: "Experience working with Agile methods and tools"
+    },
+    {
+        abriviation: "LR",
+        description: "Quick learner, control new technolies when required"
+    }
+]
+
 const Portfolio = {
     name: "Yasser",
     last_name: "Grimes",
     about_me: aboutme(),
     endorsement: endorssment,
+    certification,
     projects,
     education,
-    skills
+    skills,
+    planets
 }
 
 export default Portfolio;

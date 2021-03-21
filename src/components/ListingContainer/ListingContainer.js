@@ -59,6 +59,21 @@ function Endorsement(props) {
   )
 }
 
+function Certification(props) {
+  let im2 = require("../../data/Certifications/" + props.certification.image);
+  const s = {
+    height: "200px",
+    width: "auto"
+  }
+  return (
+    <div className="endorsement">
+      <div className="endorsement-title">{props.certification.name}</div>
+      <center><img style={s} src={im2.default}></img></center>
+      <a className="endorsement-link" href={props.certification.link}>Link</a>
+    </div>
+  )
+}
+
 function Education(props) {
   let im2 = require("../../data/Education/" + props.education.image);
   const s = {
@@ -98,6 +113,8 @@ function AboutMe(props){
   <br/>
   <h2>Endorsements: </h2>
   {portfolio.endorsement.map((e)=><Endorsement endorsement={e}/>)}
+  <h2>Certifications: </h2>
+  {portfolio.certification.map((e) => <Certification certification={e}/>)}
   <h2>Projects: </h2>
     {Object.keys(portfolio.projects).map((e) => <Project project={e} displayProject={props.displayProject}/>)}
   <p/>

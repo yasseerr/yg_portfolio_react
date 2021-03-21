@@ -13,6 +13,7 @@ import gmail_icon from "../../data/images/gmail2.png";
 import github_icon from "../../data/images/github2.png";
 import gitlab_icon from "../../data/images/gitlab2.png";
 import upwork_icon from "../../data/images/upwork2.png";
+import Portfolio from 'src/portfolio_config';
 
 const getRotationPositon = (i) => {
   let initial_angle = Math.PI * 0.95;
@@ -43,12 +44,10 @@ const MiddleMenu = () => {
     { icon: upwork_icon, link: "https://www.upwork.com/freelancers/~01932ce8601f9efcf0j"}
   ]
   const items_rendered = items.map((e,i) => <MenuItem index={i} info={e}/>);
-
+  const planets = Portfolio.planets.map((e,i)=> <PlanetItem duration={(21*(i+1))+"s"} p_radius={(200*(i+1)+(50*(i+1)))+""} planet={e} />)
   return(
     <div className="MiddleMenu">
-      <PlanetItem duration="20s" p_radius="200" />
-      <PlanetItem duration="40s" p_radius="400" />
-      <PlanetItem duration="60s" p_radius="600" />
+      {planets}
       <img src={middleContainerIcon} style={{ height: "100%", width: "auto" }} />
       <img src= {personalImage} className="personal-photo"/>
       <div className="item-container">{items_rendered}</div>

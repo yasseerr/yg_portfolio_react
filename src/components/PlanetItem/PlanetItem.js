@@ -12,8 +12,8 @@ const PlanetItem = (props) => {
   return(
     <div style={container_style} className="PlanetItem">
       <div style={{animationDuration: props.duration}} className="PlanetDiv">
-        DP
-        <div className="planet-desc"> Understanding of the 22 Design Patterns</div>
+        <span className="abriviation">{props.planet.abriviation}</span>
+        <div className="planet-desc"> {props.planet.description}</div>
       </div>
       <img src={borderSvg}></img>
     </div>
